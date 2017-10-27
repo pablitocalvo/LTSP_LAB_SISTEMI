@@ -1,0 +1,21 @@
+=================================================
+debuggin boot client 
+=================================================
+_________________________________________________
+mousepad /opt/ltsp/amd64/etc/ltsp/update-kernels.conf
+_________________________________________________
+cambia 
+
+# Default commandline arguments common to all boot methods
+CMDLINE_LINUX_DEFAULT="init=/sbin/init-ltsp quiet"
+
+in 
+
+# Default commandline arguments common to all boot methods
+CMDLINE_LINUX_DEFAULT="init=/sbin/init-ltsp"
+
+
+ltsp-chroot /usr/share/ltsp/update-kernels
+
+ltsp-update-kernels amd64
+
